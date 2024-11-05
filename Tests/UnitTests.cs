@@ -30,6 +30,36 @@ namespace GithubActionsLab
             Assert.Throws<ArgumentNullException>(() => Program.Add(null, null));
         }
 
-        // Implement 3 tests per operation, following a similar pattern as above
+        [Test]
+        public void Subtract_Valid_McIver()
+        {
+            Assert.AreEqual(1, Program.Subtract("2", "1"));
+            Assert.AreEqual(5, Program.Subtract("7", "2"));
+            Assert.AreEqual(10, Program.Subtract("22", "12"));
+        }
+
+        [Test]
+        public void Multiply_Valid_McIver()
+        {
+            Assert.AreEqual(2, Program.Multiply("1", "2"));
+            Assert.AreEqual(6, Program.Multiply("3", "2"));
+            Assert.AreEqual(35, Program.Multiply("5", "7"));
+        }
+
+        [Test]
+        public void Divide_Valid_McIver()
+        {
+            Assert.AreEqual(4, Program.Divide("8", "2"));
+            Assert.AreEqual(3, Program.Divide("9", "3"));
+            Assert.AreEqual(5, Program.Divide("35", "7"));
+        }
+
+        [Test]
+        public void Power_Valid_McIver()
+        {
+            Assert.AreEqual(1, Program.Power("1", "2"));
+            Assert.AreEqual(9, Program.Power("3", "2"));
+            Assert.AreEqual(125, Program.Power("5", "3"));
+        }
     }
 }
