@@ -33,7 +33,7 @@ namespace GithubActionsLab
         [Test]
         public void Subtract_Valid_McIver()
         {
-            Assert.AreEqual(0, Program.Subtract("2", "1"));
+            Assert.AreEqual(1, Program.Subtract("2", "1"));
             Assert.AreEqual(5, Program.Subtract("7", "2"));
             Assert.AreEqual(10, Program.Subtract("22", "12"));
         }
